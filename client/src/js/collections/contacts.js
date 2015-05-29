@@ -1,5 +1,5 @@
-var Contact = require('../models/contact');
-var Config = require('../config/config.js');
+var Contact = require('../models/contact'),
+	Config = require('../config/config.js');
 
 var Contacts = Backbone.Firebase.Collection.extend({
   model: Contact,

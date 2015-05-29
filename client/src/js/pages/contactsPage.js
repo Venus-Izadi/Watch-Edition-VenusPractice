@@ -12,7 +12,7 @@ var ContactsView = PageView.extend({
   template: require('../../templates/pages/contacts.hbs'),
 
   buttonEvents: {
-    right: 'goToHomePage',
+    right: 'goToSessionsPage',
     face: 'screenClickExample',
     left: 'back'
   },
@@ -38,8 +38,8 @@ var ContactsView = PageView.extend({
     this.$el.html('<div>Oh noes!</div>');
   },
 
-  goToHomePage: function() {
-    global.App.router.navigate('', true);
+  goToSessionsPage: function() {
+    global.App.navigate('sessions', true);
   },
 
   render: function() {

@@ -29,11 +29,11 @@ describe('The Contacts Page', function() {
   describe('button events', function () {
 
     describe('right', function () {
-      it('should take the user to the contacts page', function () {
-        spyOn(contactsPage, 'goToHomePage');
+      it('should take the user to the sessions page', function () {
+        spyOn(contactsPage, 'goToSessionsPage');
         contactsPage.setButtonEvents();
         contactsPage.trigger('right');
-        expect(contactsPage.goToHomePage).toHaveBeenCalled();
+        expect(contactsPage.goToSessionsPage).toHaveBeenCalled();
       });
 
     });

@@ -3,7 +3,8 @@
 var AppRouter = require('../src/js/router.js'),
   PageView = require('../src/js/framework/page'),
   HomePage = require('../src/js/pages/homePage'),
-  ContactPage = require('../src/js/pages/contactsPage');
+  ContactPage = require('../src/js/pages/contactsPage'),
+  SessionsPage = require('../src/js/pages/sessionsPage');
 
 describe('Application Router', function() {
 
@@ -29,6 +30,14 @@ describe('Application Router', function() {
         router.contacts();
         var isContactPage = router.renderView.calls.argsFor(0)[0] instanceof ContactPage;
         expect(isContactPage).toBeTruthy();
+      });
+    });
+
+    describe('#sessions', function() {
+      it('should load the sessions screen', function() {
+        router.sessions();
+        var isSessionsPage = router.renderView.calls.argsFor(0)[0] instanceof SessionsPage;
+        expect(isSessionsPage).toBeTruthy();
       });
     });
 
